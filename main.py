@@ -15,37 +15,38 @@ import math
 # print(y1,y2)
 
 
-def roots(a, b, c):
-    D = b ** 2 - 4 * a * c
-    d = D ** 0.5
-    x1 = (-b + d) / (2 * a)
-    x2 = (-b - d) / (2 * a)
-    print(d)
-    if D > 0:
-        return x1, x2
-    elif x1 == x2:
-        return x1
-    else:
-        exit('Complex roots')
+# def roots(a, b, c):
+#     D = b ** 2 - 4 * a * c
+#     d = D ** 0.5
+#     x1 = (-b + d) / (2 * a)
+#     x2 = (-b - d) / (2 * a)
+#     print(d)
+#     if D > 0:
+#         return x1, x2
+#     elif x1 == x2:
+#         return x1
+#     else:
+#         exit('Complex roots')
 
-x=Symbol('x')
+# x=Symbol('x')
 
-k1, k2, k3 = 12*(x*x)*sin(cos(x))-18*x+5, 10, -30
+# k1, k2, k3 = 12*(x*x)*sin(cos(x))-18*x+5, 10, -30
 
-roots = roots(k1, k2, k3)
-print(roots)
+# roots = roots(k1, k2, k3)
+# print(roots)
 
 list_x = list(range(-200, 0))
 f = lambda x: x/100
 list_x = list(map(f, list_x))
-print(list_x)
+print(f'(x)= {list_x} \n')
 
 f = lambda x: -12*(x**4)*math.sin(math.cos(x))-18*(x**3)+5*(x**2)+10*x-30
 list_y = list(map(f, list_x))
-print(list_y)
+# list_y=list(list_y)
+# list_y.sort()
+print(f'f(x)= ',list_y)
 
-plt.plot(list_x, list_y)
-plt.show()
+
 
 
 

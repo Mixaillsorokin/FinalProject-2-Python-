@@ -38,4 +38,4 @@ sign=lambda x:'f(x)>=0' if x>0 else 'f(x)<0'
 sign=list(map(sign,roots))
 print(sign)
 
-print(f)
+

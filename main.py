@@ -1,7 +1,7 @@
 import scipy
 import numpy as np
 from  graph import Graph
-Graph()
+
 list_roots=[]
 
 def func1(x,x1):
@@ -26,7 +26,7 @@ f = lambda x: round(x,2)
 list_roots = list(map(f,list_roots))
 print(f'Корни функции [x1,x2] = {list_roots}')
 
-list_x = list(range(-200, 0))
+list_x = list(range(-200, 200))
 f = lambda x: x/100
 list_x = list(map(f, list_x))
 
@@ -54,3 +54,17 @@ sign_new.append(sign[2])
 print(sign_new)
 print(f'На промежутке (-4 , {list_roots[0]}] и [{list_roots[1]}, +4) f(x)>=0 \n\
 На промежутке [{list_roots[0]}, {list_roots[1]}] f(x)<0')
+
+
+min_l=[]
+list_x = list(range(-4, 4+1))
+f = lambda x:x 
+list_x_y = list(map(f, list_x))
+
+for x in list_x_y:
+    y=-12*(x**4)*np.sin(np.cos(x))-18*(x**3)+5*(x**2)+10*x-30
+    min_l.append(y)
+    if x > min_l[-1]:
+        print(f'Вершина функции на промежутке от -4 до 4 равна координатам {x,y}')
+        break
+        
